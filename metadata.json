@@ -1,0 +1,6 @@
+{
+  "name": "SOLUS",
+  "description": "AI flight intelligence copilot for general aviation pilots, consolidating preflight data and physical pilot state into a unified threat assessment.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-brand-cyan: #00F0FF;
+  --color-brand-amber: #FFAB00;
+  --color-brand-red: #FF3D00;
+  --color-dark-bg: #0A0D12;
+  --color-dark-card: #11161D;
+  --color-dark-border: #2D3848;
+  --color-dark-accent: #1B222C;
+  --color-text-primary: #E0E6ED;
+  --color-text-secondary: #64748B;
+}
+
+/* Custom cockpit-inspired scanning/glowing rules and transitions */
+body {
+  background-color: #0A0D12;
+  color: #E0E6ED;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Smooth custom scrollbars for realistic EFBs */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D3848;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Radar scanning keyframe for extra flight safety realism */
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
